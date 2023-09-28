@@ -10,7 +10,7 @@ namespace SokszogOOP
 	{
 		private double b;
 
-		public Teglalap(double a,double b) : base(a)
+		public Teglalap(double a, double b) : base(a)
 		{
 			this.b = b;
 		}
@@ -19,12 +19,12 @@ namespace SokszogOOP
 
 		public double getKerulet()
 		{
-			return 2*(this.a+this.b);
+			return 2 * (this.a + this.b);
 		}
 
 		public double getTerulet()
 		{
-			return this.a*this.b;
+			return this.a * this.b;
 		}
 	}
 }
