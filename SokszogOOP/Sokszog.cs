@@ -8,7 +8,7 @@ namespace SokszogOOP
 {
 	internal class Sokszog
 	{
-		private double a;
+		protected double a;
 
 		public Sokszog(double a)
 		{

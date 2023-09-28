@@ -14,5 +14,17 @@ namespace SokszogOOP
 		{
 			this.b = b;
 		}
+
+		public double B { get => b; set => b = value; }
+
+		public double getKerulet()
+		{
+			return 2*(this.a+this.b);
+		}
+
+		public double getTerulet()
+		{
+			return this.a*this.b;
+		}
 	}
 }
