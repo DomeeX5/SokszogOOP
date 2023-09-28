@@ -18,13 +18,16 @@ namespace SokszogOOP
 			this.c = c;
 		}
 
-		public double B { get => b; set => b = value; }
-		public double C { get => c; set => c = value; }
-
 		public Haromszog() : base(VeletlenOldalhossz())
 		{
 			this.b = VeletlenOldalhossz();
 			this.c = VeletlenOldalhossz();
+			while (!this.IsSzerkesztheto())
+			{
+				this.A = VeletlenOldalhossz();
+				this.b = VeletlenOldalhossz();
+				this.c = VeletlenOldalhossz();
+			}
 		}
 
 		private static int VeletlenOldalhossz()
@@ -32,12 +35,22 @@ namespace SokszogOOP
 			return rnd.Next(5, 15);
 		}
 
-		public double GetKerulet()
+		public double B { get => b; set => b = value; }
+		public double C { get => c; set => c = value; }
+
+		private bool IsSzerkesztheto()
+		{
+			return this.A + this.b > this.c 
+				&& this.A + this.c > this.b 
+				&& this.b + this.c > this.A;
+		}
+
+		public override double GetKerulet()
 		{
 			return this.a + this.b + this.c;
 		}
 
-		public double GetTerulet()
+		public override double GetTerulet()
 		{
 			double s = (this.a + this.b + this.c) / 2;
 			return Math.Sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
@@ -45,7 +58,7 @@ namespace SokszogOOP
 
 		public override string ToString()
 		{
-			return $"a: {this.a} - b: {this.b} - c: {this.c} - K: {this.GetKerulet()} - T: {this.GetTerulet()}";
+			return $"a: {this.a} - b: {this.b} - c: {this.c} - {base.ToString()}";
 		}
 	}
 }
