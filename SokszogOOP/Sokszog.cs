@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SokszogOOP
 {
-	internal class Sokszog
+	internal abstract class Sokszog
 	{
 		protected double a;
 
@@ -16,5 +16,13 @@ namespace SokszogOOP
 		}
 
 		public double A { get => a; set => a = value; }
+
+		public abstract double GetKerulet();
+		public abstract double GetTerulet();
+
+		public override string ToString()
+		{
+			return $"K: {this.GetKerulet()} - T: {this.GetTerulet()}";
+		}
 	}
 }

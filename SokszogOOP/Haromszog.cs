@@ -32,12 +32,12 @@ namespace SokszogOOP
 			return rnd.Next(5, 15);
 		}
 
-		public double GetHaromszogKerulet()
+		public double GetKerulet()
 		{
 			return this.a + this.b + this.c;
 		}
 
-		public double GetHaromszogTerulet()
+		public double GetTerulet()
 		{
 			double s = (this.a + this.b + this.c) / 2;
 			return Math.Sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
@@ -45,7 +45,7 @@ namespace SokszogOOP
 
 		public override string ToString()
 		{
-			return $"a: {this.a} - b: {this.b} - c: {this.c} - K: {this.GetHaromszogKerulet()} - T: {this.GetHaromszogTerulet()}";
+			return $"a: {this.a} - b: {this.b} - c: {this.c} - K: {this.GetKerulet()} - T: {this.GetTerulet()}";
 		}
 	}
 }
