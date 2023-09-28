@@ -19,6 +19,12 @@ namespace SokszogOOP
 			Console.WriteLine(haromszog2);
 			Console.WriteLine(teglalap);
 			Console.WriteLine(teglalap2);
+
+
+			haromszog2.A = 10;
+            Console.WriteLine(haromszog2.A);
+			Console.WriteLine(haromszog2.B);
+			Console.WriteLine(haromszog2.C);
 		}
 	}
 }

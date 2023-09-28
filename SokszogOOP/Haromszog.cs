@@ -16,6 +16,10 @@ namespace SokszogOOP
 		{
 			this.b = b;
 			this.c = c;
+			if (!IsSzerkesztheto())
+			{
+				throw new ArgumentException("A háromszög nem szerkeszthető");
+			}
 		}
 
 		public Haromszog() : base(VeletlenOldalhossz())
@@ -35,8 +39,44 @@ namespace SokszogOOP
 			return rnd.Next(5, 15);
 		}
 
-		public double B { get => b; set => b = value; }
-		public double C { get => c; set => c = value; }
+		public double A
+		{
+			set 
+			{
+				this.A=value;
+				if (!IsSzerkesztheto())
+				{
+					throw new ArgumentException("A háromszög nem szerkeszthető", nameof(value));
+				}
+			}
+		}
+
+		public double B
+		{ 
+			get => b;
+			set 
+			{
+				b = value;
+				if (!IsSzerkesztheto())
+				{
+					throw new ArgumentException("A háromszög nem szerkeszthető", nameof(value));
+				}
+			} 
+		}
+		public double C 
+		{ 
+			get => c; 
+			set 
+			{
+				c = value;
+				if (!IsSzerkesztheto())
+				{
+					throw new ArgumentException("A háromszög nem szerkeszthető", nameof(value));
+				}
+			}
+		}
+
+		
 
 		private bool IsSzerkesztheto()
 		{
