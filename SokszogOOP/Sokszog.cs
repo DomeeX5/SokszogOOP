@@ -8,5 +8,13 @@ namespace SokszogOOP
 {
 	internal class Sokszog
 	{
+		private double a;
+
+		public Sokszog(double a)
+		{
+			this.a = a;
+		}
+
+		public double A { get => a; set => a = value; }
 	}
 }
