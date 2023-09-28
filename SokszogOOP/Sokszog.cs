@@ -9,6 +9,7 @@ namespace SokszogOOP
 	internal abstract class Sokszog
 	{
 		protected double a;
+		private static Random rnd = new Random();
 
 		public Sokszog(double a)
 		{
@@ -19,6 +20,15 @@ namespace SokszogOOP
 
 		public abstract double GetKerulet();
 		public abstract double GetTerulet();
+
+		public static int VeletlenOldalhossz()
+		{
+			return rnd.Next(5, 15);
+		}
+		public static int VeletlenSzog()
+		{
+			return rnd.Next(1, 179);
+		}
 
 		public override string ToString()
 		{

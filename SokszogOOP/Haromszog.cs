@@ -36,14 +36,14 @@ namespace SokszogOOP
 
 		private static int VeletlenOldalhossz()
 		{
-			return rnd.Next(5, 15);
+			return rnd.Next(1, 10000);
 		}
 
-		public double A
+		public override double A
 		{
 			set 
 			{
-				this.A=value;
+				base.A=value;
 				if (!IsSzerkesztheto())
 				{
 					throw new ArgumentException("A háromszög nem szerkeszthető", nameof(value));
