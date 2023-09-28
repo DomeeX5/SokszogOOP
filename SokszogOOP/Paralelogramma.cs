@@ -16,8 +16,6 @@ namespace SokszogOOP
 
 		public Paralelogramma() : base(VeletlenOldalhossz(), VeletlenOldalhossz())
 		{
-			base.a = VeletlenOldalhossz();
-			base.B = VeletlenOldalhossz();
 			this.alpha = VeletlenSzog();
 		}
 
@@ -30,7 +28,12 @@ namespace SokszogOOP
 
 		public override double GetTerulet()
 		{
-			return base.GetTerulet() * this.alpha;
+			return base.GetTerulet() * Math.Sin(FokToRadian(this.alpha));
+		}
+
+		public override string ToString()
+		{
+			return base.ToString();
 		}
 	}
 }

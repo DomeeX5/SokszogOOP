@@ -19,17 +19,17 @@ namespace SokszogOOP
 
 		public override double GetKerulet()
 		{
-			return 2 * (this.a + this.b);
+			return 2 * (this.A + this.b);
 		}
 
 		public override double GetTerulet()
 		{
-			return this.a * this.b;
+			return this.A * this.b;
 		}
 
 		public override string ToString()
 		{
-			return $"a: {this.a} - b: {this.b} - {base.ToString()}";
+			return $"a: {this.A} - b: {this.b} - {base.ToString()}";
 		}
 	}
 }

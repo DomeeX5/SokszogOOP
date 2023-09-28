@@ -10,7 +10,7 @@ namespace SokszogOOP
 	{
 		private double b;
 		private double c;
-		private static Random rnd = new Random();
+		
 
 		public Haromszog(double a, double b, double c) : base(a)
 		{
@@ -28,16 +28,13 @@ namespace SokszogOOP
 			this.c = VeletlenOldalhossz();
 			while (!this.IsSzerkesztheto())
 			{
-				this.A = VeletlenOldalhossz();
+				base.A = VeletlenOldalhossz();
 				this.b = VeletlenOldalhossz();
 				this.c = VeletlenOldalhossz();
 			}
 		}
 
-		private static int VeletlenOldalhossz()
-		{
-			return rnd.Next(1, 10000);
-		}
+		
 
 		public override double A
 		{
@@ -87,18 +84,18 @@ namespace SokszogOOP
 
 		public override double GetKerulet()
 		{
-			return this.a + this.b + this.c;
+			return this.A + this.b + this.c;
 		}
 
 		public override double GetTerulet()
 		{
-			double s = (this.a + this.b + this.c) / 2;
-			return Math.Sqrt(s * (s - this.a) * (s - this.b) * (s - this.c));
+			double s = (this.A + this.b + this.c) / 2;
+			return Math.Sqrt(s * (s - this.A) * (s - this.b) * (s - this.c));
 		}
 
 		public override string ToString()
 		{
-			return $"a: {this.a} - b: {this.b} - c: {this.c} - {base.ToString()}";
+			return $"a: {this.A} - b: {this.b} - c: {this.c} - {base.ToString()}";
 		}
 	}
 }

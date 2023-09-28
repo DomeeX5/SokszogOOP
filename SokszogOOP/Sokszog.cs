@@ -8,7 +8,7 @@ namespace SokszogOOP
 {
 	internal abstract class Sokszog
 	{
-		protected double a;
+		private double a;
 		private static Random rnd = new Random();
 
 		public Sokszog(double a)
@@ -25,9 +25,15 @@ namespace SokszogOOP
 		{
 			return rnd.Next(5, 15);
 		}
+
 		public static int VeletlenSzog()
 		{
 			return rnd.Next(1, 179);
+		}
+
+		public static double FokToRadian(double fok)
+		{
+			return fok * Math.PI / 180;
 		}
 
 		public override string ToString()
