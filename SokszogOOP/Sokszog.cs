@@ -23,12 +23,12 @@ namespace SokszogOOP
 
 		public static int VeletlenOldalhossz()
 		{
-			return rnd.Next(5, 15);
+			return rnd.Next(1, 100);
 		}
 
 		public static int VeletlenSzog()
 		{
-			return rnd.Next(1, 179);
+			return rnd.Next(1, 180);
 		}
 
 		public static double FokToRadian(double fok)

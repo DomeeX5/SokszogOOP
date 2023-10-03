@@ -10,28 +10,8 @@ namespace SokszogOOP
 	{
 		static void Main(string[] args)
 		{
-			//Haromszog haromszog = new Haromszog();
-			//Haromszog haromszog2 = new Haromszog(3, 4, 5);
-			//Teglalap teglalap = new Teglalap(3, 5);
-			//Teglalap teglalap2 = new Teglalap(4, 2);
-			Paralelogramma para=new Paralelogramma();
-
-			//Console.WriteLine(haromszog);
-			//Console.WriteLine(haromszog2);
-			//Console.WriteLine(teglalap);
-			//Console.WriteLine(teglalap2);
-
-   //         Console.WriteLine(haromszog2.A);
-			//try
-			//{
-			//	haromszog2.A = 10;
-			//}
-			//catch (ArgumentException ex) 
-			//{
-			//	Console.WriteLine(ex.Message);
-			//}
-			//Console.WriteLine(haromszog2.A);
-            Console.WriteLine(para);
+			var sokszogek = new Sokszogek();
+            Console.WriteLine(sokszogek);
         }
 	}
 }

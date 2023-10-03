@@ -10,6 +10,11 @@ namespace SokszogOOP
 	{
 		private double b;
 
+		public Teglalap(): base(VeletlenOldalhossz())
+		{
+			this.b = VeletlenOldalhossz();
+		}
+
 		public Teglalap(double a, double b) : base(a)
 		{
 			this.b = b;
@@ -29,7 +34,7 @@ namespace SokszogOOP
 
 		public override string ToString()
 		{
-			return $"a: {this.A} - b: {this.b} - {base.ToString()}";
+			return $"Téglalap: a: {this.A} - b: {this.b} - {base.ToString()}";
 		}
 	}
 }

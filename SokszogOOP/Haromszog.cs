@@ -95,7 +95,7 @@ namespace SokszogOOP
 
 		public override string ToString()
 		{
-			return $"a: {this.A} - b: {this.b} - c: {this.c} - {base.ToString()}";
+			return $"Háromszög: a: {this.A} - b: {this.b} - c: {this.c} - {base.ToString()}";
 		}
 	}
 }
